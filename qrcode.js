@@ -37,8 +37,7 @@ angular.module('monospaced.qrcode', [])
             context = canvas2D ? canvas.getContext('2d') : null,
             download = 'download' in attrs,
             href = attrs.href,
-            link = download || href ? document.createElement('a') : '',
-            trim = /^\s+|\s+$/g,
+            link = download || href ? document.createElemtrim = /^\s+|\s+$/g,
             error,
             version,
             errorCorrectionLevel,
@@ -129,7 +128,7 @@ angular.module('monospaced.qrcode', [])
         if (link) {
           link.className = 'qrcode-link';
           $canvas.wrap(link);
-          domElement = link;
+          domElement = element.find('a')[0];
         }
 
         setVersion(attrs.version);
